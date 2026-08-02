@@ -1,0 +1,60 @@
+{
+  "servicios": [
+    {
+      "id": "estados-parcelarios",
+      "nombre": "Estados Parcelarios",
+      "descripcion": "Cédulas catastrales Ley 10707",
+      "icono": "fa-file-alt",
+      "detalle": "Obtenemos el estado parcelario completo de tu propiedad, incluyendo superficie, dimensiones y datos catastrales oficiales."
+    },
+    {
+      "id": "declaraciones-juradas-arba",
+      "nombre": "Declaraciones Juradas ARBA",
+      "descripcion": "Revalúos y trámites catastrales",
+      "icono": "fa-file-invoice",
+      "detalle": "Realizamos la presentación de declaraciones juradas ante ARBA para revalúos y actualizaciones catastrales."
+    },
+    {
+      "id": "subdivisiones",
+      "nombre": "Subdivisiones",
+      "descripcion": "Urbanas y rurales",
+      "icono": "fa-vector-square",
+      "detalle": "Realizamos planos de subdivisión para lotes urbanos y rurales, cumpliendo con todas las normativas."
+    },
+    {
+      "id": "propiedad-horizontal",
+      "nombre": "Propiedad Horizontal",
+      "descripcion": "Mensura Horizontal CABA y Provincia",
+      "icono": "fa-building",
+      "detalle": "Elaboramos planos de propiedad horizontal para edificios y conjuntos, tanto en CABA como en provincia."
+    },
+    {
+      "id": "topografia-drone",
+      "nombre": "Topografía con Drone",
+      "descripcion": "Modelos de terreno precisos",
+      "icono": "fa-drone",
+      "detalle": "Utilizamos drones con tecnología de última generación para generar modelos de terreno 3D de alta precisión."
+    },
+    {
+      "id": "barrios-cerrados",
+      "nombre": "Barrios Cerrados",
+      "descripcion": "Conjuntos inmobiliarios",
+      "icono": "fa-home",
+      "detalle": "Realizamos la mensura y planificación de barrios cerrados y countries, incluyendo lotes y espacios comunes."
+    },
+    {
+      "id": "amojonamientos",
+      "nombre": "Amojonamientos",
+      "descripcion": "Precisos en toda Buenos Aires",
+      "icono": "fa-ruler-combined",
+      "detalle": "Realizamos amojonamientos precisos para delimitar propiedades rurales y urbanas."
+    },
+    {
+      "id": "planos-mensura",
+      "nombre": "Planos de Mensura",
+      "descripcion": "Divisiones, unificaciones y usucapión",
+      "icono": "fa-map",
+      "detalle": "Elaboramos planos de mensura para divisiones, unificaciones de terrenos y trámites de usucapión."
+    }
+  ]
+}

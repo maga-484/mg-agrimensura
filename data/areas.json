@@ -1,0 +1,40 @@
+{
+  "areas": [
+    {
+      "id": "san-vicente",
+      "nombre": "San Vicente",
+      "descripcion": "Servicios completos en San Vicente, Alejandro Korn, Domselaar y localidades aledañas",
+      "icono": "fa-map-marker-alt"
+    },
+    {
+      "id": "caba",
+      "nombre": "CABA",
+      "descripcion": "Atención en Capital Federal para trámites catastrales",
+      "icono": "fa-city"
+    },
+    {
+      "id": "zona-norte",
+      "nombre": "Zona Norte",
+      "descripcion": "Cobertura en Nordelta, Escobar, San Fernando, San Isidro, Tigre y Vicente López",
+      "icono": "fa-route"
+    },
+    {
+      "id": "zona-sur",
+      "nombre": "Zona Sur",
+      "descripcion": "Esteban Echeverría, Ezeiza, Presidente Perón y San Vicente",
+      "icono": "fa-route"
+    },
+    {
+      "id": "amba",
+      "nombre": "AMBA",
+      "descripcion": "Área metropolitana de Buenos Aires",
+      "icono": "fa-route"
+    },
+    {
+      "id": "provincia-bsas",
+      "nombre": "Provincia de Buenos Aires",
+      "descripcion": "Contáctenos para coordinar el servicio",
+      "icono": "fa-route"
+    }
+  ]
+}

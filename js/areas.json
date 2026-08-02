@@ -1,0 +1,46 @@
+{
+  "areas": [
+    {
+      "id": "san-vicente",
+      "nombre": "San Vicente",
+      "descripcion": "Servicios completos en San Vicente, Alejandro Korn, Domselaar y localidades aledañas",
+      "icono": "fa-map-marker-alt",
+      "detalle": "Cobertura integral en el partido de San Vicente con más de 15 años de experiencia en la zona."
+    },
+    {
+      "id": "caba",
+      "nombre": "CABA",
+      "descripcion": "Atención en Capital Federal para trámites catastrales",
+      "icono": "fa-city",
+      "detalle": "Atendemos trámites catastrales y mensuras en la Ciudad Autónoma de Buenos Aires."
+    },
+    {
+      "id": "zona-norte",
+      "nombre": "Zona Norte",
+      "descripcion": "Cobertura en Nordelta, Escobar, San Fernando, San Isidro, Tigre y Vicente López",
+      "icono": "fa-route",
+      "detalle": "Amplia experiencia en barrios cerrados y countries de la zona norte del AMBA."
+    },
+    {
+      "id": "zona-sur",
+      "nombre": "Zona Sur",
+      "descripcion": "Esteban Echeverría, Ezeiza, Presidente Perón y San Vicente",
+      "icono": "fa-route",
+      "detalle": "Cobertura en los partidos del sur del conurbano bonaerense."
+    },
+    {
+      "id": "amba",
+      "nombre": "AMBA",
+      "descripcion": "Área metropolitana de Buenos Aires",
+      "icono": "fa-route",
+      "detalle": "Servicios en todo el Área Metropolitana de Buenos Aires."
+    },
+    {
+      "id": "provincia-bsas",
+      "nombre": "Provincia de Buenos Aires",
+      "descripcion": "Contáctenos para coordinar el servicio",
+      "icono": "fa-route",
+      "detalle": "Cobertura en toda la provincia de Buenos Aires. Consultanos por tu zona."
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HQ05M9WVN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1HQ05M9WVN');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="es-AR" />
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="San Vicente" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="yfGlbZ6-nkYd0n5uWNZ3bIEwbT8XLj47co-3NnI4_B8" />
+
+    <title>Contacto │ MG Agrimensura</title>
+    <meta name="description" content="Contactanos para solicitar presupuesto de servicios de agrimensura en San Vicente y Zona Norte." />
+
+    <link rel="canonical" href="https://www.mgagrimensura.com.ar/pages/contacto.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER - Mismo que index                     -->
+    <!-- ============================================ -->
+    <header role="banner" aria-label="Encabezado principal de MG Agrimensura">
+        <div class="container">
+            <h1>MG Agrimensura <span class="header-location">San Vicente &amp; Zona Norte</span></h1>
+            <p class="header-subtitle">Servicios catastrales, topográficos y agrimensura con más de 15 años de experiencia</p>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- NAV - Misma navegación que index             -->
+    <!-- ============================================ -->
+    <nav role="navigation" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="../index.html#ubicaciones">Áreas de Trabajo</a></li>
+                <li><a href="../index.html#enlaces">Enlaces de Interés</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- MAIN - SOLO EL FORMULARIO                    -->
+    <!-- ============================================ -->
+    <main role="main" id="contenido-principal" class="container">
+
+        <section id="contacto" aria-labelledby="contacto-titulo" class="contacto-section">
+            <h2 id="contacto-titulo">Solicitud de Presupuesto</h2>
+            <p class="section-subtitle">Completá el formulario y te responderemos a la brevedad</p>
+
+            <!-- Servicio seleccionado desde la URL -->
+            <div id="servicio-seleccionado" class="servicio-seleccionado" style="display:none;">
+                <p><strong>Servicio seleccionado:</strong> <span id="servicio-nombre"></span></p>
+                <p id="servicio-detalle"></p>
+            </div>
+
+            <!-- FORMULARIO CON ACTION DE FORMSPREE -->
+            <form id="contacto-form" 
+                  class="formulario-contacto" 
+                  action="https://formspree.io/f/TU-FORM-ID-AQUI" 
+                  method="POST"
+                  novalidate>
+
+                <!-- Nombre -->
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required aria-required="true" />
+                    <span class="mensaje-error" id="error-nombre"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required aria-required="true" />
+                    <span class="mensaje-error" id="error-email"></span>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono <span aria-hidden="true">*</span></label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678" required aria-required="true" />
+                    <span class="mensaje-error" id="error-telefono"></span>
+                </div>
+
+                <!-- Servicio (select) -->
+                <div class="campo-formulario">
+                    <label for="servicio">Servicio de interés <span aria-hidden="true">*</span></label>
+                    <select id="servicio" name="servicio" required aria-required="true">
+                        <option value="">Seleccioná un servicio</option>
+                        <option value="Estados Parcelarios">Estados Parcelarios</option>
+                        <option value="Declaraciones Juradas ARBA">Declaraciones Juradas ARBA</option>
+                        <option value="Subdivisiones">Subdivisiones</option>
+                        <option value="Propiedad Horizontal">Propiedad Horizontal</option>
+                        <option value="Topografía con Drone">Topografía con Drone</option>
+                        <option value="Barrios Cerrados">Barrios Cerrados</option>
+                        <option value="Amojonamientos">Amojonamientos</option>
+                        <option value="Planos de Mensura">Planos de Mensura</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tu proyecto..."></textarea>
+                </div>
+
+                <!-- Términos -->
+                <div class="campo-formulario checkbox">
+                    <input type="checkbox" id="acepto-terminos" name="terminos" required />
+                    <label for="acepto-terminos">
+                        Acepto los <a href="../terminos-servicio.html" target="_blank">términos y condiciones</a>
+                        <span aria-hidden="true">*</span>
+                    </label>
+                </div>
+
+                <!-- Botón enviar -->
+                <button type="submit" class="boton-enviar">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar solicitud
+                </button>
+            </form>
+
+            <!-- Mensaje de éxito (se muestra con JS) -->
+            <div id="mensaje-exito" class="mensaje-exito" style="display:none;">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                <strong>¡Solicitud enviada con éxito!</strong>
+                <p>Te contactaremos a la brevedad. Muchas gracias.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER - Mismo que index                     -->
+    <!-- ============================================ -->
+    <footer role="contentinfo" aria-label="Pie de página">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>MG Agrimensura</h3>
+                    <p>Servicios profesionales de agrimensura en San Vicente y Zona Norte</p>
+                    <p class="footer-contacto">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+542223507394">+54 2223 507394</a>
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#servicios">Servicios</a></li>
+                        <li><a href="../index.html#ubicaciones">Áreas de Trabajo</a></li>
+                        <li><a href="../index.html#enlaces">Enlaces de Interés</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="../terminos-servicio.html">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MG Agrimensura - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- BOTÓN WHATSAPP                               -->
+    <!-- ============================================ -->
+    <div class="wa-chat-btn" id="waButton" role="button" aria-label="Contactar por WhatsApp" tabindex="0">
+        <svg class="wa-chat-btn-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-6.29-3.51c.549 1.422 1.444 2.674 2.655 3.575.173.124.347.26.52.36l.47.275c.123.074.248.148.372.148.099 0 .198-.025.272-.124.074-.099.372-.471.495-.644.124-.173.248-.174.372-.099.124.075.744.558.858.658.114.099.198.148.322.074.124-.074.644-.46.818-.632.173-.173.26-.198.347-.173.086.025.161.112.322.273.16.162.31.323.434.483.124.16.26.36.434.547.173.186.198.273.086.46-.112.186-.223.31-.409.434-.186.124-.372.26-.558.372-.186.112-.372.223-.434.26-.062.037-.111.112-.025.236.086.124.384.533.659.868.543.66 1.013 1.145 1.013 1.208 0 .062-.037.136-.111.198-.075.062-.161.074-.223.037-.062-.025-.434-.198-1.013-.607-.58-.409-1.013-.607-1.086-.644-.074-.037-.136-.037-.198.037-.062.074-.248.434-.31.558-.062.124-.124.148-.235.074-.112-.074-.558-.31-1.062-.756-.505-.446-.844-.756-.92-.832-.075-.075-.099-.136-.037-.235.063-.1.26-.26.384-.384.124-.124.173-.211.124-.235-.05-.025-.136 0-.285.074-.149.075-.285.125-.434.2-.149.075-.26.1-.297.05-.037-.05 0-.136.087-.261.087-.124.322-.409.446-.558.41-.496.558-.694.52-.756-.025-.062-.112-.037-.26.025-.149.063-.868.519-1.235.756-.366.237-.434.26-.495.237-.062-.025-.112-.112-.161-.211-.05-.1-.198-.273-.272-.372-.074-.1-.149-.112-.272-.037-.124.074-.66.384-.945.558-.285.174-.558.26-.62.26-.062 0-.136-.025-.161-.087-.025-.062.025-.186.124-.347.1-.16.434-.595.607-.814.173-.218.26-.328.26-.38 0-.062-.037-.087-.161-.149-.124-.062-.744-.372-1.013-.52-.272-.148-.47-.26-.434-.31.037-.05.112-.025.235.025.124.05.708.347.92.471.213.124.384.186.434.161.05-.024.086-.111.062-.211-.025-.1-.26-.595-.384-.832-.124-.236-.272-.41-.434-.52-.161-.112-.297-.186-.26-.223.025-.037.149-.025.322.074.174.1.557.756.756.756h.186c.062 0 .112-.025.136-.062.025-.038.025-.087-.012-.187-.038-.1-.42-1.016-.583-1.39-.16-.372-.32-.558-.446-.558-.037 0-.112.025-.186.062m8.816 4.378c-.008.132-.027.263-.056.39a9.094 9.094 0 0 1-11.71 6.916 9.105 9.105 0 0 1-5.547-5.547A9.095 9.095 0 0 1 12.004 2.88a9.07 9.07 0 0 1 7.354 3.551 9.082 9.082 0 0 1 1.640 7.879M12 0C5.374 0 0 5.374 0 12c0 2.42.744 4.67 2.016 6.537L0 24l5.625-1.921A11.91 11.91 0 0 0 12 24c6.627 0 12-5.373 12-12 0-6.626-5.373-12-12-12" />
+        </svg>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ============================================ -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
