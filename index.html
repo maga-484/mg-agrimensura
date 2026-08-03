@@ -123,21 +123,30 @@
         </div>
       </section>
 
-<!-- ========================================== -->
-<!-- SECCIÓN 3: UBICACIONES (cargadas desde JSON) -->
-<!-- ========================================== -->
-<section id="ubicaciones" aria-labelledby="ubicaciones-titulo">
-    <h2 id="ubicaciones-titulo">Áreas de Trabajo</h2>
-    <p class="section-subtitle">Cobertura en todo el AMBA y provincia de Buenos Aires</p>
+      <!-- ========================================== -->
+      <!-- SECCIÓN 3: UBICACIONES (cargadas desde JSON) -->
+      <!-- ========================================== -->
+      <section id="ubicaciones" aria-labelledby="ubicaciones-titulo">
+        <h2 id="ubicaciones-titulo">Áreas de Trabajo</h2>
+        <p class="section-subtitle">
+          Cobertura en todo el AMBA y provincia de Buenos Aires
+        </p>
 
-    <!-- Contenedor donde se renderizan las áreas -->
-    <div id="areas-container" class="ubicaciones-grid">
-        <div class="loading-message">
+        <!-- Contenedor donde se renderizan las áreas -->
+        <div id="areas-container" class="ubicaciones-grid">
+          <div class="loading-message">
             <i class="fas fa-spinner fa-spin"></i> Cargando áreas de trabajo...
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
+      <section class="servicio-parcelas">
+        <h2>📍 Solicitud de Presupuesto</h2>
+        <p>
+          ¿Tenés un terreno? Dibujá tu parcela en el mapa y envianos los datos
+          para cotizar.
+        </p>
+        <a href="parcelas/index.html" class="btn-primario">Enviar parcela</a>
       </section>
 
       <section id="enlaces" aria-labelledby="enlaces-titulo">
@@ -262,5 +271,6 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
