@@ -1,6 +1,10 @@
 // ============================================
 // ENTRY POINT — ORQUESTADOR
 // ============================================
+
+// IMPORTANTE: cargar envío primero para que registre listeners
+import "./envio.js";
+
 import { cargar } from "./storage.js";
 import * as parcelas from "./parcelas.js";
 import {
@@ -22,6 +26,9 @@ function init() {
   calcularMetricas();
   inicializarEventosMapa();
   inicializarBotones();
+
+  // Notificar a envio.js que ya hay parcelas listas
+  document.dispatchEvent(new CustomEvent("parcela:actualizada"));
 }
 
 init();

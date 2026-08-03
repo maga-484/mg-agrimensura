@@ -28,7 +28,6 @@ const txtPerimetro = document.getElementById("resultado-perimetro");
 const txtArea = document.getElementById("resultado-area");
 const txtHectareas = document.getElementById("resultado-hectareas");
 
-// Helper seguro
 function setText(selector, text) {
   const el =
     typeof selector === "string" ? document.querySelector(selector) : selector;
@@ -42,18 +41,15 @@ function setHtml(selector, html) {
 }
 
 // ============================================
-// APLICAR TRADUCCIONES ESTÁTICAS AL DOM
+// TRADUCCIONES
 // ============================================
 
 function aplicarTraducciones() {
   try {
     const lang = getLang();
-
-    // Marcar botón activo
     if (btnLangEs) btnLangEs.classList.toggle("active", lang === "es");
     if (btnLangEn) btnLangEn.classList.toggle("active", lang === "en");
 
-    // Textos estáticos
     setText("h2", t("titulo"));
     setText(".seccion-parcelas h3", t("parcelasTitulo"));
     setText(".instrucciones", t("instrucciones"));
@@ -63,14 +59,12 @@ function aplicarTraducciones() {
       `${t("formatos")}: <strong>CSV, KML, GeoJSON, GPX, SHP (.zip), WKT, TopoJSON</strong>`,
     );
 
-    // Labels por orden de aparición
     const labels = document.querySelectorAll(".grupo-control label");
     const labelKeys = ["capaBase", "parcelaActiva", "importar"];
     labels.forEach((lbl, i) => {
       if (labelKeys[i]) setText(lbl, t(labelKeys[i]));
     });
 
-    // Botones
     setText(btnNueva, t("btnNueva"));
     setText(btnRenombrar, t("btnRenombrar"));
     setText(btnEliminar, t("btnEliminar"));
@@ -79,7 +73,6 @@ function aplicarTraducciones() {
     setText(btnExportar, t("btnExportar"));
     setText(btnUbicacion, t("btnUbicacion"));
 
-    // Métricas labels
     const metricasSpans = document.querySelectorAll(".fila-metrica span");
     const metricKeys = [
       "vertices",
@@ -94,7 +87,6 @@ function aplicarTraducciones() {
 
     setText(".utm-badge strong", t("utmExacta"));
 
-    // Opciones del selector de capa
     if (selCapa) {
       const opts = selCapa.querySelectorAll("option");
       const capaKeys = ["capaOSM", "capaHOT", "capaVoyager", "capaSatelite"];
@@ -103,7 +95,6 @@ function aplicarTraducciones() {
       });
     }
 
-    // Actualizar métricas dinámicas
     calcularMetricas();
   } catch (err) {
     console.error("Error en aplicarTraducciones:", err);
@@ -201,6 +192,7 @@ export function inicializarEventosMapa() {
     parcelas.renderizarTodo();
     calcularMetricas();
     guardarEnStorage();
+    document.dispatchEvent(new CustomEvent("parcela:actualizada"));
   });
 
   mapa.on("dblclick", (e) => {
@@ -209,6 +201,7 @@ export function inicializarEventosMapa() {
       parcelas.renderizarTodo();
       calcularMetricas();
       guardarEnStorage();
+      document.dispatchEvent(new CustomEvent("parcela:actualizada"));
       L.popup()
         .setLatLng(e.latlng)
         .setContent(`<b>${t("cerrado")}</b>`)
@@ -222,7 +215,6 @@ export function inicializarEventosMapa() {
 // ============================================
 
 export function inicializarBotones() {
-  // Selector de idioma
   if (btnLangEs) btnLangEs.addEventListener("click", () => setLang("es"));
   if (btnLangEn) btnLangEn.addEventListener("click", () => setLang("en"));
 
@@ -233,6 +225,7 @@ export function inicializarBotones() {
       parcelas.renderizarTodo();
       calcularMetricas();
       guardarEnStorage();
+      document.dispatchEvent(new CustomEvent("parcela:actualizada"));
     });
 
   if (btnRenombrar)
@@ -260,6 +253,7 @@ export function inicializarBotones() {
         parcelas.renderizarTodo();
         calcularMetricas();
         guardarEnStorage();
+        document.dispatchEvent(new CustomEvent("parcela:actualizada"));
       }
     });
 
@@ -269,6 +263,7 @@ export function inicializarBotones() {
       parcelas.renderizarTodo();
       calcularMetricas();
       guardarEnStorage();
+      document.dispatchEvent(new CustomEvent("parcela:actualizada"));
     });
 
   if (selCapa)
@@ -288,6 +283,7 @@ export function inicializarBotones() {
       parcelas.deshacerActiva();
       calcularMetricas();
       guardarEnStorage();
+      document.dispatchEvent(new CustomEvent("parcela:actualizada"));
     });
 
   if (btnReiniciar)
@@ -295,6 +291,7 @@ export function inicializarBotones() {
       parcelas.limpiarActiva();
       calcularMetricas();
       guardarEnStorage();
+      document.dispatchEvent(new CustomEvent("parcela:actualizada"));
     });
 
   if (btnExportar)
@@ -367,6 +364,7 @@ export function inicializarBotones() {
           parcelas.renderizarTodo();
           calcularMetricas();
           guardarEnStorage();
+          document.dispatchEvent(new CustomEvent("parcela:actualizada"));
 
           const lats = coords.map((c) => c.lat);
           const lngs = coords.map((c) => c.lng);
@@ -384,13 +382,11 @@ export function inicializarBotones() {
       }
     });
 
-  // Escuchar actualizaciones desde parcelas.js (drag de marcadores)
   document.addEventListener("parcela:actualizada", () => {
     calcularMetricas();
     guardarEnStorage();
   });
 
-  // Toggle panel en mobile
   const btnToggle = document.getElementById("btn-toggle-panel");
   const panel = document.getElementById("panel");
 
@@ -408,7 +404,6 @@ export function inicializarBotones() {
     });
   }
 
-  // Aplicar traducciones al cargar
   aplicarTraducciones();
 }
 

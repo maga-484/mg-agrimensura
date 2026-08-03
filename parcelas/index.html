@@ -97,6 +97,40 @@
           ></small
         >
       </div>
+
+      <!-- FORMULARIO DE ENVÍO -->
+      <div class="formulario-envio">
+        <h3>📋 Enviar Parcela</h3>
+        <div id="resumen-parcela" class="resumen-parcela">
+          <p class="info-vacia">Dibuje una parcela con al menos 3 vértices.</p>
+        </div>
+        <form id="form-envio" novalidate>
+          <div class="campo-formulario">
+            <label for="envio-nombre">Nombre completo *</label>
+            <input type="text" id="envio-nombre" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="envio-email">Email *</label>
+            <input type="email" id="envio-email" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="envio-telefono">Teléfono *</label>
+            <input type="tel" id="envio-telefono" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="envio-direccion">Dirección de la propiedad *</label>
+            <input type="text" id="envio-direccion" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="envio-mensaje">Mensaje</label>
+            <textarea id="envio-mensaje" rows="3"></textarea>
+          </div>
+          <button type="submit" id="btn-enviar" class="btn-exito" disabled>
+            Enviar Parcela
+          </button>
+          <div id="envio-mensaje-estado" class="mensaje-estado"></div>
+        </form>
+      </div>
     </div>
 
     <div id="mapa"></div>

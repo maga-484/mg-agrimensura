@@ -1,6 +1,7 @@
 // ============================================
 // ENTRY POINT — ORQUESTADOR
 // ============================================
+import "./envio.js"; // ← AGREGAR ESTA LÍNEA
 import { cargar } from "./storage.js";
 import * as parcelas from "./parcelas.js";
 import {
